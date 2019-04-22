@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "280f5d46-32a6-4cfe-a286-ca5dbd8acecc",
+		"name": "StoreApI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddProduct",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n\n{\n\t\"Name\":\"balls\",\n\t\"Price\":39,\n\t\"Quantity\":4\n}"
+				},
+				"url": {
+					"raw": "https://spareassignment.herokuapp.com/AddProduct",
+					"protocol": "https",
+					"host": [
+						"spareassignment",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"AddProduct"
+					]
+				},
+				"description": "Adding new Product"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdaeProduct",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n\n{\n\t\"Name\":\"ball modfied\",\n\t\"Price\":39,\n\t\"Quantity\":4,\n\t\"Id\":1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/UpdateProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"UpdateProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"productId\":1\n}"
+				},
+				"url": {
+					"raw": "https://spareassignment.herokuapp.com/DeleteProduct",
+					"protocol": "https",
+					"host": [
+						"spareassignment",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"DeleteProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://spareassignment.herokuapp.com/products",
+					"protocol": "https",
+					"host": [
+						"spareassignment",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddShoppingList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"productId\":1\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/AddShoppingList",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AddShoppingList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddItemToShoppingList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"shoppingListId\":1,\n\t\"productId\":2\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/AddItemToShoppingList",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AddItemToShoppingList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RemoveItemFromShoppingList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"shoppingListId\":1,\n\t\"productId\":2\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/AddItemToShoppingList",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AddItemToShoppingList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShoppingLists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/shoppingLists",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shoppingLists"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

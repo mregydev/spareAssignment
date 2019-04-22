@@ -4,19 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin mocha tests/**/*.spec.js"
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "chai": "^4.2.0",
     "express": "^4.16.4",
-    "express-validator": "^5.3.1",
-    "mocha": "^6.1.4",
-    "supertest": "^4.0.2",
     "wagner": "^0.6.4",
     "wagner-core": "^0.2.0"
+  },
+  "devDependencies": {
+    "supertest": "^4.0.2",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
   }
 }

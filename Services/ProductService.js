@@ -20,6 +20,7 @@ wagner.invoke((ProductDAL, ShoppingListDAL) => {
 
         let product = req.body
 
+        
         if (!product || !Product.IsValid(product)) {
             res.sendValidationError([messages.ProductRequired])
         }

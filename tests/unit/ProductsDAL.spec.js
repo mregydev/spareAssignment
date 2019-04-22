@@ -1,7 +1,7 @@
 const ProductDAL = require('../../DAL/ProductsDAL')
 const Product = require('../../Entities/Product')
 
-const should = require('chai').should
+const should = require('chai').should()
 
 describe('ProductDAL test cases', () => {
 
@@ -23,9 +23,11 @@ describe('ProductDAL test cases', () => {
 
             let res = productDAL.AddProduct(testProduct)
 
-            res.should.be(1)
+            res.should.equals(1)
 
-            productDAL.Products.length.should.be(1)
+            productDAL.Products.length.should.equals(1)
+
+            done()
         })
     })
 

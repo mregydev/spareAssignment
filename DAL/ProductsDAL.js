@@ -48,7 +48,7 @@ class ProductsDAL {
     * @returns {Boolean}
     */
     ExistProduct(productId) {
-        return this._products.filter(p => p.Id === productId && p.Quantity > 0).length
+        return this._products.filter(p => p.Id === productId && p.Quantity > 0).length>0
     }
 
 
